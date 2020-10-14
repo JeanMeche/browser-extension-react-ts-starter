@@ -24,7 +24,9 @@
     "watch:contentscript-background": "cross-env NODE_ENV=development webpack --config webpack.config.js -w",
     "watch:popup": "npm run watch:build --prefix src/popup",
     "watch": "npm-run-all --parallel watch:*",
-    "zip": "bestzip extension.zip dist/*"
+    "zip": "bestzip extension.zip dist/*",
+    "start:firefox": "web-ext run --source-dir ./dist/",
+    "start:chrome": "web-ext run -t chromium --source-dir ./dist/"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -60,6 +62,7 @@
     "ts-node": "^9.0.0",
     "tslint": "^6.1.3",
     "typescript": "^3.9.7",
+    "web-ext": "^5.2.0",
     "webpack": "4.42.0",
     "webpack-cli": "^4.0.0",
     "webpack-extension-reloader": "^1.1.4"

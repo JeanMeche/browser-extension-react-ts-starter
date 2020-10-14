@@ -40,5 +40,5 @@
 // });
 
 const isThisBackground = true;
-console.log('isThisBackground', isThisBackground);
+console.log('isThisBackground: ', isThisBackground);
 
