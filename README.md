@@ -1,7 +1,6 @@
 # chrome-ext-react-ts-starter
 Starter for a Chrome Extention with TS 
 
-
 # develop
 `npm run watch` to build the extension on each source change
 
@@ -11,7 +10,7 @@ Starter for a Chrome Extention with TS
 
 # Targets
 ## Chrome
-To run the extension in Firefox `npm run start:chrome`
+To run the extension in Chrome `npm run start:chrome`. It will start a new instance. 
 
 ### Firefox
 To run the extension in Firefox `npm run start:firefox`

@@ -1,6 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Command } from '../../shared/api';
+
+const sendMessage = (c: Command) => {
+  console.log('sending message');
+  chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+    var activeTab = tabs[0];
+    chrome.tabs.sendMessage(activeTab.id!, { message: 'start' });
+  });
+};
 
 function App() {
   return (

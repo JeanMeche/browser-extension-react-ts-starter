@@ -3,6 +3,7 @@
 # compiled output
 /dist
 src/popup/build
+src/popup/dist
 
 # dependencies
 /node_modules
