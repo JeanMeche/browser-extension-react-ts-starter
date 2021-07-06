@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@metamask/onboarding": "^1.0.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -22,11 +23,11 @@
     "build": "npm-run-all build:*",
     "prewatch": "npm run clean",
     "watch:contentscript-background": "cross-env NODE_ENV=development webpack --config webpack.config.js -w",
-    "watch:popup": "npm run watch:build-craco --prefix src/popup",
+    "watch:popup": "npm run watch:build --prefix src/popup",
     "watch": "npm-run-all --parallel watch:*",
     "zip": "bestzip extension.zip dist/*",
     "start:firefox": "web-ext run --source-dir ./dist/",
-    "start:chrome": "web-ext run -t chromium --source-dir ./dist/"
+    "start:chrome": "web-ext run -t chromium --source-dir ./dist/ --chromium-profile '/Users/kyro/Library/Application Support/Google/Chrome/Default'"
   },
   "eslintConfig": {
     "extends": "react-app",
